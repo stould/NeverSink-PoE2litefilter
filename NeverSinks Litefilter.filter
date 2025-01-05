@@ -78,28 +78,30 @@ MinimapIcon 0 Red Star
 
 Show
 AreaLevel >= 70
-StackSize >= 1000
+StackSize >= 500
 BaseType == "Gold"
-SetTextColor 255 255 255
-SetBorderColor 255 255 255
+SetTextColor 244 255 0
+SetBorderColor 0 0 0
+SetBackgroundColor 145 145 0
+SetFontSize 30
 PlayEffect Orange Temp
-MinimapIcon 2 White Cross
 
 Show
 AreaLevel < 70
-StackSize >= 500
+StackSize >= 300
 BaseType == "Gold"
-SetTextColor 255 255 255
-SetBorderColor 255 255 255
+SetTextColor 244 255 0
+SetBorderColor 0 0 0
+SetBackgroundColor 145 145 0
+SetFontSize 30
 PlayEffect Orange Temp
-MinimapIcon 2 White Cross
 
 Show
 BaseType == "Gold"
-SetTextColor 180 180 180
-SetBorderColor 0 0 0 255
-SetBackgroundColor 0 0 0 180
-MinimapIcon 2 Grey Cross
+SetTextColor 0 0 0
+SetBorderColor 0 0 0
+SetBackgroundColor 110 110 0
+SetFontSize 27
 
 #--------------------------
 # Uncut Gems
@@ -172,6 +174,53 @@ PlayAlertSound 2 300
 PlayEffect Cyan
 MinimapIcon 1 Cyan Triangle
 SetFontSize 40
+
+#--------------------------
+# Custom Magic or Normal items for crafting
+#--------------------------
+
+#High level crossbows
+Show
+SetBorderColor 200 0 0
+ItemLevel >= 62
+Rarity < Rare
+SetTextColor 163 47 0
+SetBackgroundColor 255 190 190
+DisableDropSound True
+BaseType == "Expert Forlorn Crossbow" "Expert Bombard Crossbow" "Expert Tense Crossbow" "Expert Varnished Crossbow" "Expert Sturdy Crossbow"
+
+#High level energy shield body armours
+Show
+SetBorderColor 200 0 0
+SetFontSize 38
+Rarity < Rare
+Class == "Body Armours"
+SetTextColor 0 34 255
+SetBackgroundColor 0 255 174
+DisableDropSound True
+BaseType == "Expert Wayfarer Jacket" "Expert Scalper's Jacket" "Expert Waxed Jacket"
+
+#High level boots
+Show
+SetBorderColor 200 0 0
+SetFontSize 38
+Rarity < Rare
+Class == "Boots"
+SetTextColor 0 34 255
+SetBackgroundColor 0 255 174
+DisableDropSound True
+BaseType == "Expert Feathered Sandals" "Expert Silk Slippers" "Expert Hunting Shoes"
+
+#High level gloves
+Show
+SetBorderColor 200 0 0
+SetFontSize 38
+Rarity < Rare
+Class == "Gloves"
+SetTextColor 0 34 255
+SetBackgroundColor 0 255 174
+DisableDropSound True
+BaseType == "Expert Intricate Gloves" "Expert Jewelled Gloves" "Expert Linen Wraps"
 
 #--------------------------
 # Socketables and Special Character Equipment
@@ -408,15 +457,6 @@ SetFontSize 40
 #--------------------------
 
 Show
-WaystoneTier < 10
-AreaLevel > 77
-BaseType "Waystone"
-Rarity <= Rare
-SetTextColor 255 255 255
-SetBorderColor 255 255 255
-SetFontSize 35
-
-Show
 WaystoneTier < 5
 AreaLevel > 74
 BaseType "Waystone"
@@ -426,13 +466,36 @@ SetBorderColor 255 255 255
 SetFontSize 35
 
 Show
+WaystoneTier < 10
+AreaLevel > 77
+BaseType "Waystone"
+Rarity <= Rare
+SetTextColor 255 255 255
+SetBorderColor 255 206 0
+SetBackgroundColor 61 83 0
+SetFontSize 35
+MinimapIcon 1 White Square
+SetFontSize 38
+PlayAlertSound 4 300
+
+Show
+WaystoneTier < 17
+AreaLevel > 77
+BaseType "Waystone"
+SetTextColor 255 255 255
+SetBorderColor 200 0 0
+SetBackgroundColor 83 0 0
+MinimapIcon 1 White Square
+SetFontSize 38
+PlayAlertSound 4 300
+
+Show
 BaseType "Waystone"
 Rarity <= Rare
 SetTextColor 255 255 255
 SetBorderColor 255 255 255
 PlayAlertSound 4 300
 PlayEffect White
-MinimapIcon 1 White Square
 SetFontSize 40
 
 #--------------------------
@@ -478,26 +541,8 @@ SetFontSize 40
 
 Show
 Sockets > 0
-Rarity Normal
-SetBorderColor 200 200 200
-SetFontSize 35
-
-Show
 Quality > 0
-Rarity Normal
 SetBorderColor 200 200 200
-SetFontSize 35
-
-Show
-Sockets > 0
-Rarity Magic
-SetBorderColor 0 0 200
-SetFontSize 35
-
-Show
-Quality > 0
-Rarity Magic
-SetBorderColor 0 0 200
 SetFontSize 35
 
 #--------------------------
@@ -506,11 +551,11 @@ SetFontSize 35
 
 ## Uncomment this rule to hide low level rares in high level zones
 
-# Hide
-# Rarity Rare
-# DropLevel < 50
-# AreaLevel > 72
-# SetFontSize 35
+Hide
+Rarity Rare
+DropLevel < 50
+AreaLevel > 72
+SetFontSize 35
 
 Show
 Rarity Rare
