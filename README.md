@@ -1,5 +1,15 @@
 [![Follow me on Twitter](https://img.shields.io/badge/twitter-grey.svg?style=for-the-badge&logo=twitter)](https://twitter.com/NeverSinkDev) [![FilterBlade Discord](https://img.shields.io/badge/discord-grey.svg?style=for-the-badge&logo=discord)](https://discord.gg/zFEx92a) [![Watch FB Dev on Twitch](https://img.shields.io/badge/twitch-grey.svg?style=for-the-badge&logo=twitch)](https://twitch.tv/neversink) [![Support development on Patreon](https://img.shields.io/badge/patreon-grey.svg?style=for-the-badge&logo=patreon)](https://www.patreon.com/Neversink)
 
+## **BUILD FOR DEADEYE CROSSBOW HIGHLEVEL - COPY AT YOUR OWN RISK**
+
+# This filter changes:
+* Shows colored gold
+* Highlighs some specific high level items such as ES bases and crossbows
+* Hides some low level waystones
+* Hides loe level spititm, skill and support gems
+* Hides most of magic items
+* Maybe a few more stuff
+
 ## **QUICK START:**
 
 This is an "ItemFilter" - a script for the game Path of Exile 2 (not PoE1!). It highlights valuable items, and enhances gameplay comfort and experience.
